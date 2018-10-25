@@ -1,0 +1,21 @@
+<table class="table">
+    <thead>
+      <tr>
+        <td>User</td>
+        <td>To do</td>
+        <td>Copleted</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let item of todosChild'>
+        <td>{{item.userId}}</td>
+        <td><button (click)="selectTodo(item.title)">{{item.title}}</button></td>
+        <td>
+          <label class="badge badge-success" 
+            *ngIf='item.completed'>Completed</label>
+          <label class="badge badge-danger"  
+            *ngIf='!item.completed'>In Progress</label>
+        </td>
+      </tr>
+    </tbody>
+    </table>
