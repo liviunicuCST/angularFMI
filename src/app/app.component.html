@@ -1,12 +1,5 @@
 
-<div class="container">
-  <div class="page-header">
-    <h2>To do's - {{selectedText}}</h2>
-  </div>
-  <br/>
-  <button class="btn btn-default" (click)="getAllTodos()">Reset</button>
-  <button class="btn btn-success" (click)="filterByCompleted(true)">Show all completed</button>
-  <button class="btn btn-danger" (click)="filterByCompleted(false)">Show all in progress</button>
-<hr/>
-<app-to-do-table [todosChild]="todos" (selectData)="setText($event)"></app-to-do-table>
-</div>
+<a routerLink="/home">Home</a>
+<a routerLink="/todos">Todos</a>
+
+<router-outlet></router-outlet>
